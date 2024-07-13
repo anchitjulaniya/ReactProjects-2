@@ -16,6 +16,7 @@ function Modal({name, setName, dob, setDob, aadhaar, setAadhaar, mobile, setMobi
                 type="text"
                 name="name"
                 id="name"
+                minLength={3}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className="w-full border border-black rounded-lg px-2 py-1"
@@ -41,6 +42,7 @@ function Modal({name, setName, dob, setDob, aadhaar, setAadhaar, mobile, setMobi
                 name="aadhaar"
                 id="aadhaar"
                 minLength={12}
+                maxLength={12}
                 value={aadhaar}
                 onChange={(e) => setAadhaar(e.target.value)}
                 className="w-full border border-black rounded-lg px-2 py-1"
@@ -55,6 +57,7 @@ function Modal({name, setName, dob, setDob, aadhaar, setAadhaar, mobile, setMobi
                 id="mobile"
                 value={mobile}
                 minLength={10}
+                maxLength={10}
                 onChange={(e) => setMobile(e.target.value)}
                 className="w-full border border-black rounded-lg px-2 py-1"
               />
@@ -66,7 +69,7 @@ function Modal({name, setName, dob, setDob, aadhaar, setAadhaar, mobile, setMobi
                 type="number"
                 name="age"
                 id="age"
-                min={0}
+                min={10}
                 max={150}
                 value={age}
                 onChange={(e) => setAge(e.target.value)}
